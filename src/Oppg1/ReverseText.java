@@ -6,20 +6,23 @@ import java.util.Scanner;
  */
 
 public class ReverseText {
+
     public static void backwards(String text){
-        if(text.length() == 0) {
-            return;
-        }else {
-            System.out.print(text.substring(text.length() - 1));
-            backwards(text.substring(0, text.length() - 1));
-        }
+        backwards(text, text.length());
+    }
+
+    public static void backwards(String text, int last){
+        if(last == 0) return;
+        System.out.print(text.substring(last - 1));
+        backwards(text.substring(0, last - 1));
     }
 
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter a word: ");
+        System.out.println("Enter a string: ");
         String text = input.nextLine();
         backwards(text);
-        System.out.print("\nYour word has been reversed.");
+        System.out.print("\nYour string has been reversed.");
+        System.out.print("\nThe number of characters in your String is: " + text.replace(" ", "").length());
     }
 }
