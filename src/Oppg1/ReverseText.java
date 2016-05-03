@@ -2,7 +2,6 @@ package Oppg1;
 import java.util.Scanner;
 /**
  * Created by Thea on 07.04.2016.
- * Ja, oppgaven skriker "SKRIV PÅ NORSK", men regner med du helst vil ha alt på engelsk?
  */
 
 public class ReverseText {
